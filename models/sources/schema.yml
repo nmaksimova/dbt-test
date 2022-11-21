@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: analyst
+    description: 'A database schema in Postgres.'
+    database: postgres
+    schema: analyst  
+    tables:
+      - name: mongo_projects
+        description: 'Project details from MongoDB'
+      - name: mongo_users
+        description: 'User details from MongoDB'      
+
+  - name: app_stackbit_com_production
+    description: 'A database schema in Postgres.'
+    database: postgres
+    schema: app_stackbit_com_production    
+    tables:
+      - name: studio_publish_site_clicked
+      - name: studio_share_popup_copied_preview_link
