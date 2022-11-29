@@ -9,7 +9,8 @@ sources:
       - name: mongo_projects
         description: 'Project details from MongoDB'
       - name: mongo_users
-        description: 'User details from MongoDB'      
+        description: 'User details from MongoDB'
+      - name: mongo_organizations      
 
   - name: app_stackbit_com_production
     description: 'A database schema in Postgres.'
@@ -18,3 +19,45 @@ sources:
     tables:
       - name: studio_publish_site_clicked
       - name: studio_share_popup_copied_preview_link
+      - name: studio_mode_changed
+      - name: studio_create_page_created_page
+      - name: studio_duplicate_page_duplicated_page
+      - name: studio_editor_image_field_finished_adding
+      - name: studio_wysiwyg_image_field_finished_adding
+      - name: studio_wysiwyg_add_object_clicked
+      - name: studio_field_detail_add_item_to_list
+      - name: studio_cms_panel_add_item_to_list
+      - name: studio_custom_domain_added
+      - name: studio_editor_field_changed
+      - name: subscription_page_loaded
+      - name: studio_loaded
+      - name: pages
+
+
+  - name: api_stackbit_com_production
+    description: 'A database schema in Postgres.'
+    database: postgres
+    schema: api_stackbit_com_production    
+    tables:   
+      - name: collaborators_invite_collaborator
+      - name: subscription_purchased
+      - name: project_schedule_publishing_scheduled
+      - name: webhook_github_push
+      - name: subscription_canceled
+      - name: transfer_repo_success
+      - name: user_registered
+      - name: contentful_webhook_details
+      - name: webhook_sanity
+
+  - name: stripe
+    description: 'A database schema in Postgres.'
+    database: postgres
+    schema: stripe    
+    tables:   
+      - name: subscriptions
+      - name: customers
+      - name: plans
+      - name: charges
+      - name: subscription_canceled
+      - name: transfer_repo_success
+      - name: user_registered
