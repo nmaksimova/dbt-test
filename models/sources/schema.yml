@@ -58,6 +58,3 @@ sources:
       - name: customers
       - name: plans
       - name: charges
-      - name: subscription_canceled
-      - name: transfer_repo_success
-      - name: user_registered
