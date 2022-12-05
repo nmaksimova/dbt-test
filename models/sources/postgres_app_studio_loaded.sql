@@ -1,0 +1,68 @@
+WITH studio_loaded AS (
+    select 
+       id,
+       received_at,
+       context_page_title,
+       event_text,
+       metrics_build_duration_to_first_live,
+       metrics_did_change_github_name,
+       metrics_last_developer_commit_at,
+       uuid_ts,
+       context_page_search,
+       user_id,
+       context_library_name,
+       context_page_referrer,
+       context_page_url,
+       metrics_has_developer_commits,
+       project_id,
+       anonymous_id,
+       context_page_path,
+       metrics_deploy_success_count,
+       metrics_developer_commit_count,
+       metrics_did_change_netlify_name,
+       metrics_deploy_count,
+       context_library_version,
+       context_locale,
+       event,
+       metrics_build_duration,
+       metrics_real_score_auto_score,
+       metrics_real_score_manual_score,
+       context_traits_email,
+       context_user_agent,
+       metrics_build_start_time,
+       context_ip,
+       original_timestamp,
+       sent_at,
+       timestamp,
+       environment,
+       metrics_studio_score,
+       context_campaign_source,
+       metrics_daily_visits_date,
+       metrics_daily_visits,
+       metrics_monthly_visits,
+       context_campaign_medium,
+       context_campaign_name,
+       route_referrer,
+       is_hibernating,
+       context_traits_branch,
+       classifications_real_sites1_2,
+       classifications_real_sites1_1,
+       context_campaign_content,
+       tier_id,
+       is_preview,
+       context_traits_subdomain,
+       branch,
+       subdomain,
+       is_local,
+       organization_id,
+       context_amplitude_session_id
+    from {{ source('app_stackbit_com_production', 'studio_loaded') }}
+),
+
+final as (
+    select *
+    from studio_loaded
+)
+
+select *
+from final
