@@ -66,7 +66,7 @@ page_created_src AS (
 
 ),
 
-page_dupicated_src AS (
+page_duplicated_src AS (
 
     SELECT *
     FROM {{ ref('postgres_app_studio_duplicate_page_duplicated_page')}}
