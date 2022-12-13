@@ -364,6 +364,8 @@ custom_components_added AS (
         MAX(timestamp::date) as latest_event_at
     from webhook_github_push_src
     where commit_files_added like '%src/components%' 
+    group by 1,2
+
 
 ),
 
