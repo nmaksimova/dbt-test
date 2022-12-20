@@ -37,4 +37,6 @@ models:
     example:
       materialized: table
     sources:
-      materialized: view  
+      materialized: view 
+    marts:
+      materialized: table   
