@@ -5,7 +5,7 @@ WITH studio_editor_field_changed_src AS (
 
 ),
 
-AS analytics_eval_accounts_src AS (
+analytics_eval_accounts_src AS (
 
     SELECT *
     FROM {{ ref('analytics_eval_accounts') }}
