@@ -1,7 +1,7 @@
 WITH studio_publish_site_clicked_src AS (
 
     SELECT *
-    FROM {{ ref('postgres_app_studio_piblish_site_clicked')}}
+    FROM {{ ref('postgres_app_studio_publish_site_clicked')}}
 
 ),
 
